@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/charts/textLine/textLine",
     "pages/index/index",
     "pages/charts/radar/radar",
     "pages/charts/line/line",

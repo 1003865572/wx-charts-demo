@@ -1,0 +1,27 @@
+
+<view class="container" >算力图</view>
+
+<view class="condition" >
+  <text
+    wx:for="{{condition}}"
+    wx:key="condition"
+    bindtap="changeCondition"
+    data-key="{{item.name}}"
+  >{{item.name}}</text>
+</view>
+
+<view class="container">
+  <canvas
+    canvas-id="lineCanvas"
+    class="canvas"
+    bindtouchmove="touchMove"
+    bindtouchstart="touchHandler"
+  />
+</view>
+
+<view class="container">
+  <canvas
+    canvas-id="columnChart"
+    class="canvas"
+  />
+</view>

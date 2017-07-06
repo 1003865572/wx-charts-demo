@@ -18,7 +18,7 @@ var chartData = {
     }, {
         title: '2014年度成交量',
         data: [76, 45, 32, 74, 54, 35],
-        categories: ['1', '2', '3', '4', '5', '6']                
+        categories: ['1', '2', '3', '4', '5', '6']
     }, {
         title: '2015年度成交量',
         data: [76, 54, 23, 12, 45, 65],
@@ -47,24 +47,25 @@ Page({
         });
     },
     touchHandler: function (e) {
-        var index = columnChart.getCurrentDataIndex(e);
-        if (index > -1 && index < chartData.sub.length && this.data.isMainChartDisplay) {
-            this.setData({
-                chartTitle: chartData.sub[index].title,
-                isMainChartDisplay: false
-            });
-            columnChart.updateData({
-                categories: chartData.sub[index].categories,
-                series: [{
-                    name: '成交量',
-                    data: chartData.sub[index].data,
-                    format: function (val, name) {
-                        return val.toFixed(2) + '万';
-                    }
-                }]
-            });
-
-        }
+      var index = columnChart.getCurrentDataIndex(e);
+      console.info(index)
+        // if (index > -1 && index < chartData.sub.length && this.data.isMainChartDisplay) {
+        //     this.setData({
+        //         chartTitle: chartData.sub[index].title,
+        //         isMainChartDisplay: false
+        //     });
+        //     columnChart.updateData({
+        //         categories: chartData.sub[index].categories,
+        //         series: [{
+        //             name: '成交量',
+        //             data: chartData.sub[index].data,
+        //             format: function (val, name) {
+        //                 return val.toFixed(2) + '万';
+        //             }
+        //         }]
+        //     });
+        //
+        // }
     },
     onReady: function (e) {
         var windowWidth = 320;

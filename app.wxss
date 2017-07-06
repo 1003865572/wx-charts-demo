@@ -10,7 +10,25 @@
     color: #333;
     font-family: Helvetica,Arial,"Helvetica Neue","Droid Sans","Microsoft YaHei",sans-serif;
 }
+.container text{
+  float: left;
+}
 .canvas {
     width: 100%;
     height: 200px;
+}
+.condition text{
+  padding: 10px 5px;
+  width: 10vw;
+  font-size: 3vw;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+.condition text:active{
+  background: #ccc;
+}
+.condition text:last-of-type {
+  border: 1px solid #ccc;
 }

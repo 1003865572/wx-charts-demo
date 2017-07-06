@@ -9,7 +9,7 @@ Page({
         lineChart.showToolTip(e, {
             // background: '#7cb5ec'
         });
-    },    
+    },
     createSimulationData: function () {
         var categories = [];
         var data = [];
@@ -45,7 +45,7 @@ Page({
         } catch (e) {
             console.error('getSystemInfoSync failed!');
         }
-        
+
         var simulationData = this.createSimulationData();
         lineChart = new wxCharts({
             canvasId: 'lineCanvas',
